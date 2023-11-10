@@ -1,11 +1,11 @@
 public class GasolinCar extends AFuelCar {
 
-    public GasolinCar(String registrationNumber, String make, String model, int numberOfDoors, String fuelType, int kmPrLitre) {
+    public GasolinCar(String registrationNumber, String make, String model, int numberOfDoors, String fuelType, int kmPrLitre) {    //Skeleton for the gasoline car
         super(registrationNumber, make, model, numberOfDoors, fuelType, kmPrLitre);
     }
 
-    public String toString() {
-        return "Gasolin Car{" +
+    public String toString() {  //Printing the gasoline car
+        return "Gasoline Car{" +
                 "Registration number='" + getRegistrationNumber() + '\'' +
                 ", Maker = '" + getMake() + '\'' +
                 ", Model = '" + getModel() + '\'' +
@@ -14,7 +14,7 @@ public class GasolinCar extends AFuelCar {
                 "KM/L = " + getKmPrLitre() + '}';
     }
 
-    protected int getRegistationFee() throws IllegalAccessException {
+    protected int getRegistationFee() throws IllegalAccessException {   //Calculation for the registration fee for the gasoline car
         int registationFee = 0;
 
         if (getKmPrLitre() < 5) {

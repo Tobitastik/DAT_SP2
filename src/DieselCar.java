@@ -2,16 +2,16 @@ public class DieselCar extends AFuelCar {
 
     private boolean particleFilter;
 
-    public DieselCar(String registrationNumber, String make, String model, int numberOfDoors, String fuelType, int kmPrLitre, boolean particleFilter) {
+    public DieselCar(String registrationNumber, String make, String model, int numberOfDoors, String fuelType, int kmPrLitre, boolean particleFilter) { //Skeleton for the diesel car, the particle filter is the only difference to AFuelCar
         super(registrationNumber, make, model, numberOfDoors, fuelType, kmPrLitre);
         this.particleFilter = particleFilter;
     }
 
     public boolean hasParticleFilter() {
         return particleFilter;
-    }
+    }   //Checking if the car have a particle filter
 
-    protected int getRegistationFee() throws IllegalAccessException {
+    protected int getRegistationFee() throws IllegalAccessException {   //Calculating the registration fee
         int registationFee = 0;
 
         if (getKmPrLitre() < 5) {
@@ -28,13 +28,13 @@ public class DieselCar extends AFuelCar {
             throw new IllegalAccessException("Invalid KM/L input");
         }
 
-        if (hasParticleFilter() == false) {
+        if (hasParticleFilter() == false) {     //If the car doesn't have a particle filter adds additional fee
             registationFee = registationFee + 1000;
         }
         return registationFee;
     }
 
-    public String toString() {
+    public String toString() {  //printing the diesel car
         return "Diesel Car{" +
                 "Registration number='" + getRegistrationNumber() + '\'' +
                 ", Maker = '" + getMake() + '\'' +
@@ -46,7 +46,7 @@ public class DieselCar extends AFuelCar {
     }
 
     @Override
-    public int getRegistrationFee() throws IllegalAccessException {
+    public int getRegistrationFee() throws IllegalAccessException { //getting the registration fee for the giving car
         return getRegistationFee();
     }
 

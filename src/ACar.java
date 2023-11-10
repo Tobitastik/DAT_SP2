@@ -5,7 +5,7 @@ abstract class ACar implements Car {
     public final String model;
     public final int numberOfDoors;
 
-    public ACar(String registrationNumber, String make, String model, int numberOfDoors) {
+    public ACar(String registrationNumber, String make, String model, int numberOfDoors) {  //Skeleton for both fuel and electric cars
         this.registrationNumber = registrationNumber;
         this.make = make;
         this.model = model;

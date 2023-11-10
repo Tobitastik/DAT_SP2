@@ -3,7 +3,7 @@ public class ElectricCar extends ACar {
     private final int batteryCapacity;
     private final int maxRange;
 
-    public ElectricCar(String registrationNumber, String make, String model, int numberOfDoors, int batteryCapacity, int maxRange) {
+    public ElectricCar(String registrationNumber, String make, String model, int numberOfDoors, int batteryCapacity, int maxRange) {    //Creating a new electric car
         super(registrationNumber, make, model, numberOfDoors);
         this.batteryCapacity = batteryCapacity;
         this.maxRange = maxRange;
@@ -17,12 +17,13 @@ public class ElectricCar extends ACar {
         return maxRange;
     }
 
-    public int getWhPrKm() {
-        int WhPrKM = batteryCapacity / maxRange;
+    public int getWhPrKm() {    //Getting watt per km
+        int WhPrKM;
+        WhPrKM = getBatteryCapacityKWh() / getMaxRangeKM();
         return WhPrKM;
     }
 
-    public int getRegistationFee() throws IllegalAccessException {
+    public int getRegistationFee() throws IllegalAccessException {  //Calculating the registation fee based om the watt/km
         int registationFee = 0;
         double electricCarRange = (getWhPrKm() / 91.25) / 100;
         if (electricCarRange < 5) {
@@ -41,7 +42,7 @@ public class ElectricCar extends ACar {
         return registationFee;
     }
 
-    public String toString() {
+    public String toString() {  //printing the data for the electric car
         return "Electric Car{" +
                 "Registration number = '" + getRegistrationNumber() + '\'' +
                 ", Maker = '" + getMake() + '\'' +
