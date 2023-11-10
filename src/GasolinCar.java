@@ -6,11 +6,11 @@ public class GasolinCar extends AFuelCar {
 
     public String toString() {  //Printing the gasoline car
         return "Gasoline Car{" +
-                "Registration number='" + getRegistrationNumber() + '\'' +
-                ", Maker = '" + getMake() + '\'' +
-                ", Model = '" + getModel() + '\'' +
-                ", Number of doors = " + getNumberOfDoors() + '\'' +
-                ", Fuel type = " + getFuelType() + '\'' +
+                "Registration number = " + getRegistrationNumber() +
+                ", Maker = " + getMake() +
+                ", Model = " + getModel() +
+                ", Number of doors = " + getNumberOfDoors() +
+                ", Fuel type = " + getFuelType() +
                 "KM/L = " + getKmPrLitre() + '}';
     }
 

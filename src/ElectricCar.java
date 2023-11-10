@@ -44,12 +44,12 @@ public class ElectricCar extends ACar {
 
     public String toString() {  //printing the data for the electric car
         return "Electric Car{" +
-                "Registration number = '" + getRegistrationNumber() + '\'' +
-                ", Maker = '" + getMake() + '\'' +
-                ", Model = '" + getModel() + '\'' +
+                "Registration number = " + getRegistrationNumber() +
+                ", Maker = " + getMake() +
+                ", Model = " + getModel() +
                 ", Number of doors = " + getNumberOfDoors() +
                 ", Battery capacity = " + batteryCapacity +
-                ", Max range=" + maxRange +
+                ", Max range = " + maxRange +
                 '}';
     }
 

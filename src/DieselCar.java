@@ -36,12 +36,12 @@ public class DieselCar extends AFuelCar {
 
     public String toString() {  //printing the diesel car
         return "Diesel Car{" +
-                "Registration number='" + getRegistrationNumber() + '\'' +
-                ", Maker = '" + getMake() + '\'' +
-                ", Model = '" + getModel() + '\'' +
-                ", Number of doors = " + getNumberOfDoors() + '\'' +
-                ", Fuel type = " + getFuelType() + '\'' +
-                " KM/L = " + getKmPrLitre() + '\'' +
+                "Registration number= " + getRegistrationNumber() +
+                ", Maker = " + getMake() +
+                ", Model = " + getModel() +
+                ", Number of doors = " + getNumberOfDoors() +
+                ", Fuel type = " + getFuelType() +
+                " KM/L = " + getKmPrLitre() +
                 " Particle filter = " + hasParticleFilter() + '}';
     }
 
